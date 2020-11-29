@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="mo.css">
+        <title>STATISTICS OLYMPIAD</title>
+        <link rel="icon" href="icon.png"  sizes="16x16"> 
+    </head>
+
+    <style>
+        .body {
+    background-image: url(bgg.jpg);
+    margin: auto;
+    padding: 0;
+   
+}
+
+.header {
+    
+    text-align: center;
+    font-size: 200%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color:  rgb(255, 115, 0);
+    text-align: center;
+    width: 100%;
+}
+
+.headerr {
+    background-color: rgb(255, 115, 0);
+    width: 100% ;
+}
+
+table {
+    border-collapse: collapse;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    margin-top: 20px;
+    align-content: center;
+    margin-bottom: 50px;
+  }
+  
+  td, th {
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  tr:nth-child(odd) {
+    background-color: #dddddd;
+  }
+  
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #fca2a2;
+    color: white;
+  }
+
+.tableh {
+    font-size: 240%;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.content {
+    text-align: center;
+    font-size: 200%
+}
+
+.myinputt {
+    width:99.5%;
+    margin-top:77px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    padding-left: 0px;
+    text-align: center;
+    left: 0;
+    right: 0;
+   
+
+
+}
+
+.tableh {
+    font-size: 200%;
+    color: black;
+}
+
+.rrr {
+    color: red;
+    margin-left: 7%;
+}
+
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 85%;
+  margin-left: 7%;
+  cursor: pointer;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */ 
+
+.bbb {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  
+}
+
+    </style>
+    
+
+    <body class="body">
+        <div class="headerr">
+            <div class="header">
+                <strong> STATISTICS OLYMPIAD </strong>
+             </div>
+        </div>
+
+        <input type="text" name="" id="myInput" placeholder="Serach your Certificate by your name 🔍" class="myinputt" onkeyup="searchFun()">
+        
+
+        
+
+        
+        <table id="myTable">
+            <tr>
+              <th class="tableh"><strong>Download Your Certificate</strong></th>
+            </tr>
+            <tr> <td class="content"><a href="stat-01.jpg" download> Shuvechcha Saha Bristy</a></td> </tr> 
+<tr> <td class="content"><a href="stat-02.jpg" download> Shuvra Saha Rimjim</a></td> </tr> 
+<tr> <td class="content"><a href="stat-03.jpg" download> Md. Emon Prodhan</a></td> </tr> 
+<tr> <td class="content"><a href="stat-04.jpg" download> Akib Khan</a></td> </tr> 
+<tr> <td class="content"><a href="stat-05.jpg" download> Ayman Rasheed</a></td> </tr> 
+<tr> <td class="content"><a href="stat-06.jpg" download> Sabbir Ahmed</a></td> </tr> 
+<tr> <td class="content"><a href="stat-07.jpg" download> Sadia Benta Bashar</a></td> </tr> 
+<tr> <td class="content"><a href="stat-08.jpg" download> Rodoshi Debnath</a></td> </tr> 
+<tr> <td class="content"><a href="stat-09.jpg" download> Ashjaee Mansib Chowdhury</a></td> </tr> 
+<tr> <td class="content"><a href="stat-10.jpg" download> Faiyaz Mahmud Nirob</a></td> </tr> 
+
+
+
+ 
+            
+            
+        </table>
+
+<script>
+    const searchFun = () => {
+        let filter = document.getElementById('myInput').value.toUpperCase();
+
+        let myTable = document.getElementById('myTable');
+
+        let tr = myTable.getElementsByTagName('tr');
+
+        for(var i=0; i<tr.length ; i++){
+            let td = tr[i].getElementsByTagName('td')[0];
+
+            if(td){
+                let textvalue = td.textContent || td.innerHTML;
+
+                if(textvalue.toUpperCase().indexOf(filter) > -1){
+                    tr[i].style.display = "";  
+                }else{
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+        
+    }
+</script>
+
+<div class="foooter">
+    <div class="footer">
+        <strong> Developed by SADMAN SAMI  </strong><br/>
+         <small class="small">&copy; TESLA LAB</small>
+     </div>
+</div>
+
+    </body>
+</html>
+
+
+
+
+
+
